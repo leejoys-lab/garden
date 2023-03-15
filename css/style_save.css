@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+.nanummyeongjo * {
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+/* 스와이퍼 기본*/
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 0.9375vw;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+	--swiper-theme-color:transparent;
+}
+
+#visual .myVisual .swiper-button-prev {
+	padding: 50rem 30rem;
+	position: absolute;
+	left: 0;top: 0;
+}
+#visual .myVisual .swiper-button-next {
+	padding: 50rem 30rem;
+	position: absolute;
+	right: 0;top: 0;
+}
+
+#content .mySection .swiper-button-prev{
+	top: calc(23.44vw + 31.25px);
+	right: calc(0.26vw + 0.52px);
+}
+#content .mySection .swiper-button-next{
+	top: calc(23.44vw + 31.25px);
+	left: calc(37.5vw - 17.81px);
+}
+#content .mySection .swiper-button-prev::after{
+	content: '';
+	display: block;
+	width: calc(1.56vw + 3.13px);
+	height: calc(1.56vw + 3.13px);
+	background-image: url('../images/arrow_right_gray.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+#content .mySection .swiper-button-next::after{
+	content: '';
+	display: block;
+	width: calc(1.56vw + 3.13px);
+	height: calc(2.29vw + 4.38px);
+	background-image: url('../images/arrow_left_gray.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+/* 스와이퍼 수정 */
+/* 비주얼 */
+#visual .swiper-wrapper h3 {
+	position: absolute;
+	left: 50%;
+	bottom: 53%;
+	transform: translateX(-50%);
+	color: #fff;
+	font-size: 1.4583vw;
+	font-weight: 200;
+	font-family: 'Nanum Myeongjo', serif;
+	word-break: keep-all;
+}
+
+/* wrap */
+#wrap {
+	width: 100%;
+}
+.inner {
+	padding: 0 8.3333vw;
+	width: 1600px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+/* 비주얼 */
+#visual {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+/* header 시작(서울시 소식) */
+#header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+#header .seoul-news {
+	background: #19161c;
+	box-sizing: border-box;
+	padding: 0 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 4.8rem;
+	transition: 0.3s;
+}
+.seoul-news.hide{
+	opacity:0
+}
+
+#header .seoul-news .seoul-logo {
+	display: block;
+	padding-bottom: 0.9rem;
+}
+#header .seoul-news .seoul-logo img {
+	height: 2.2rem;
+}
+#header a {
+	display: inline-block;
+	padding: 0.4rem;
+	color: #fff;
+	font-size: 1.3rem;
+	font-weight: 200;
+}
+#header a:hover {
+	color: #36c2b8;
+}
+/* 왼쪽 말풍선*/
+#header .seoul-notice {
+	position: absolute;
+	left: 16rem;
+	top: 1rem;
+	margin-left: 3rem;
+}
+
+#header .seoul-notice a img {
+	padding-top: 0.2rem;
+}
+#header .seoul-notice a span {
+	margin-left: 0.4rem;
+}
+/* 서울시 오른쪽 메뉴*/
+#header .right-box {
+	position: absolute;
+	right: 12rem;
+	top: 1rem;
+}
+#header .right-box span {
+}
+#header .right-box span a {
+	margin-left: 0.5rem;
+}
+#header p.close {
+	margin-right: 2.2rem;
+	cursor: pointer;
+	padding: 1rem;
+}
+#header p.close i {
+	font-size: 1.8rem;
+	color: #fff;
+}
+#header p.close i:hover {
+	color: #36c2b8;
+}
+
+/* 서울식물원 로고 */
+#header .main-logo {
+	text-align: center;
+	position: relative;
+}
+#header .main-logo a {
+	position: absolute;
+	left: 50%;
+	top: 1.0417vw;
+	transform: translateX(-50%);
+}
+#header .main-logo a img {
+	width: 9.375vw;
+}
+
+/* 비주얼 시작 */
+.myVisual {
+	height: 100vh;
+}
+
+#visual .menu {
+	position: absolute;
+	right: 2rem;
+	top: 2.8rem;
+	z-index: 1000;
+	display: none;
+}
+#visual .menu img {
+	width: 3.5rem;
+}
+
+/* 왼쪽 뉴스(공지사항) */
+.control-box {
+	display: flex;
+	width: 100%;
+	height: 13.8%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 200;
+	justify-content: space-between;
+	align-items: end;
+}
+.control-box .news-box {
+	width: 37%;
+	height: 70%;
+	background: #fcfaf8;
+	box-sizing: border-box;
+	position: relative;
+}
+.control-box .news-box .news {
+	width: 67%;
+	position: absolute;
+	left: 50%;
+	bottom: 30%;
+	transform: translateX(-50%);
+}
+.control-box .news-box .news li {
+	display: flex;
+	display: none;
+	border-bottom: 1px solid #999;
+}
+.control-box .news-box .news li a {
+	font-size: 0.8333vw;
+	padding: 0.2604vw;
+	padding-right: 0.5208vw;
+	display: flex;
+	color: #222;
+	position: relative;
+}
+.control-box .news-box .news li a div strong {
+	font-weight: 600;
+}
+.control-box .news-box .news li a div em {
+	font-weight: 600;
+	color: #175f5a;
+	margin: 0.2604vw 0.4167vw;
+}
+.control-box .news-box .news li a div p {
+	display: inline-block;
+}
+.control-box .news-box .news li.on {
+	display: block;
+}
+.control-box .news-box .news li a .more {
+	position: absolute;
+	right: 2.2%;
+	bottom: 0;
+	transition: 0.3s;
+}
+.control-box .news-box .news li a:hover .more {
+	right: 1%;
+}
+.control-box .news-box .news li .more img {
+	width: 1.25vw;
+}
+
+/* info-box : 관람시간*/
+.control-box .info-box {
+	width: 63%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 3.125vw;
+	background: #fff;
+	box-sizing: border-box;
+	font-size: 0.9375vw;
+	align-items: center;
+}
+.control-box .info-txt {
+	margin: auto;
+}
+.control-box .info-txt span {
+	color: #222;
+}
+.control-box .info-txt span img {
+	width: 1.5625vw;
+	margin-right: 0.3604vw;
+	position: relative;
+	left: 0;
+	top: -2px;
+}
+.control-box .info-txt span strong {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	margin-right: 1.5625vw;
+	position: relative;
+}
+.control-box .info-txt .time {
+	margin-right: 0.9375vw;
+}
+.control-box .info-txt .time::after {
+	display: none;
+}
+.control-box .info-txt strong::after {
+	content: '';
+	display: inline-block;
+	width: 0.1042vw;
+	height: 0.9375vw;
+	margin-left: 1.5625vw;
+	position: relative;
+	left: 0;
+	bottom: -0.3rem;
+	background: #dedede;
+}
+.control-box .info-txt span em {
+	margin-right: 1.0417vw;
+}
+.control-box .info-txt .entry-time {
+}
+.control-box .info-txt .end-time {
+}
+.control-box .info-txt .rest {
+	color: #ff4c13;
+}
+/* 자세히보기 */
+.control-box .info-box .more {
+	width: 17.7%;
+	height: 100%;
+	background: #05302d;
+	position: relative;
+}
+.control-box .info-box .more a {
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 200;
+	font-size: 1.0417vw;
+}
+
+/* 컨텐츠시작 */
+#container {}
+#content {}
+.main {}
+.main .con-box {width: 100%;}
+.main .con-box .inner {}
+
+/* 컨텐츠 공통 */
+.main .sub-txt{
+	color: #9A9A8A;
+	font-size: 2.8646vw;
+	width: 26.0417vw;
+	transform: rotate(-90deg);
+	transform-origin: right top;
+	opacity: 0.6;
+	z-index: 20;
+}
+.main .con-box h2 {
+	font-size: 2.5000vw;
+	padding-top: 5.2083vw;
+	margin-bottom: 3.3333vw;
+}
+
+/* 01. 체험 및 투어  */
+.notice {background:#FCFAF8;}
+
+.notice .inner {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 8.3333vw;
+}
+.main .notice .vid-wrap {
+	position: relative;
+	width: 23.9583vw;;
+	height: 36.4583vw;
+	left:0;bottom: -2.5000vw;
+}
+
+.main .notice .vid-wrap .vid {
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	border-radius: 25vw 25vw 0 0;
+	z-index: 10;
+}
+.main .notice .vid-wrap .vid video {
+	height: 100%;
+	position: absolute;
+	left: -8rem;
+	bottom:-1.0417vw;
+	height:103%;
+}
+.main .notice .vid-wrap .line {
+	position: absolute;
+	left: -8.3750vw;
+	top: 7.2vw;
+}
+.main .notice .vid-wrap .line img {
+	width: 13.0208vw;
+}
+.main .notice .sub-txt {
+	position: absolute;
+	left:-20.0521vw; top:23.7917vw;
+}
+
+/* 체험 및 투어신청 게시판 */
+.main .notice .notice-wrap {
+	width: 68%;
+	padding-left: 8.3333vw;
+	box-sizing: border-box;
+}
+
+.main .notice .notice-list {position: relative;
+}
+.main .notice .notice-list ul {
+	width: 100%;
+}
+.main .notice .notice-list ul li {
+	border-bottom: 1px solid #999;
+}
+.main .notice .notice-list ul li a {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.9375vw;
+	height: 3.1250vw;
+	line-height: 3.1250vw;
+	padding: 0 0.4167vw;
+	box-sizing: border-box;
+}
+.main .notice .notice-list ul li a .title {
+	width: 43%; 
+	white-space: nowrap; 
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+.main .notice .notice-list ul li a .title p:only-child:not(:empty) {font-family: 'Montserrat'
+}
+.main .notice .notice-list ul li a .type {
+	display: block;
+	width:4.6875vw; height: 1.3021vw;
+	border: 1px solid #222;
+	border-radius: 2rem;
+	font-size: 0.8333vw;
+	line-height: 1.3021vw;
+	text-align: center;
+	color: #222;
+	font-weight: 300;
+}
+.main .notice .notice-list ul li a .type.on{
+	background: #222;
+	color: #FCFAF8;
+
+}
+.main .notice .notice-list ul li a .date {
+	width: 25%;
+	font-family: 'Montserrat';
+	font-size: 0.8333vw;
+}
+.main .notice .notice-list ul li:first-child a .date{
+}
+.main .notice .notice-list ul li a .arrow {
+	width: 2.5%; height: 100%;
+	position: relative;
+}
+.main .notice .notice-list ul li a .arrow img {
+	width: 1.2760vw;
+	position: absolute;
+	left: -0.2604vw; top: 50%;
+	transform: translateY(-50%);
+	transition: left 0.3s;
+}
+.main .notice .notice-list ul li a:hover .title{
+	font-weight: 500;
+	color: #175f5a;
+}
+.main .notice .notice-list ul li a:hover .arrow img{
+	left:0.2604vw;
+}
+
+.main .notice .notice-list p.more {
+	position: absolute;
+	right: 0.3vw; top: 5.9896vw;
+	
+}
+.main .notice .notice-list p.more a em{
+	display: none;
+}
+.main .notice .notice-list p.more a span{
+border: 1px solid #666;
+display: block;
+width: 1.9792vw; height: 1.9792vw;
+border-radius: 50%;
+text-align: center;
+position: relative;
+transition: 0.1s;
+color: #666;
+}
+.main .notice .notice-list p.more a span i {
+	font-size: 1.1458vw;
+	position: absolute;
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.main .notice .notice-list p.more a:hover{
+	border-color: #175f5a;
+	background: #175f5a;
+	color: #fff;
+}
+
+/*  section 식물원 둘러보기 */
+.section {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	background-image: url(../images/sec_bg.jpg);
+	overflow: hidden;
+}
+.section .inner{
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 13.0208vw 0;
+}
+.section .left-box{
+	width: 50%;
+}
+.section .left-box .sec-txt{}
+.section .left-box .sec-txt h2{
+	margin-bottom: 2.0833vw;
+}
+.section .left-box .sec-txt p{
+	font-size: 0.9375vw;
+	width:26.8750vw;
+	word-break: keep-all;
+	line-height:1.5000vw;
+	margin-bottom: 2.8646vw;
+}
+.section .left-box .sec-txt p.more{}
+.section .left-box .sec-txt p.more a{
+	width: 6.2500vw;
+	display: flex;
+	justify-content: space-between;
+	align-items : bottom;
+}
+.section .left-box .sec-txt p.more a em {}
+.section .left-box .sec-txt p.more a span {
+}
+.section .left-box .sec-txt p.more a span img {
+	width: 1.0417vw;
+	position: relative;
+	right: 0.5208vw; top: 0.3125vw;
+	transition:0.3s
+}
+.section .left-box .sec-txt p.more a:hover span img{
+	right: 0;
+}
+
+.section .left-box .title{
+	text-align-last: left;
+	margin-top: 1.6146vw;
+	margin-bottom: 0.7292vw;
+	font-size: 1.3542vw;
+}
+.section .left-box .txt{
+	text-align-last: left;
+	font-size: 0.9375vw;
+}
+/* 스와이퍼 */
+.section .left-box .mySection-wrap{
+width: 100%; height: 500px;
+}
+.section .left-box .mySection-wrap .mySection .swiper-wrapper{
+	width: 100%; height: 27.0833vw;
+}
+.section .left-box .mySection-wrap .mySection{
+	
+}
+
+.section .left-box .mySection-wrap .mySection .swiper-slide{
+	width: 19.2708vw !important;
+	height: 00px !important;
+	background: transparent;
+}
+.section .left-box .mySection-wrap .mySection .swiper-slide .img-box{
+	width: 100%; height:10.4167vw;
+}
+
+.section .left-box .mySection-wrap .mySection .swiper-slide p.txt{
+	padding-bottom: 1.5625vw;
+}
+
+.con-box .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    left: var(--swiper-scrollbar-sides-offset,0px);
+    bottom: var(--swiper-scrollbar-bottom,1.0417vw);
+    top: var(--swiper-scrollbar-top,auto);
+    z-index: 50;
+    height: var(--swiper-scrollbar-size,0.1042vw);
+	width: 100%;
+}
+
+/* right-box 시작 */
+.section .right-box{
+	width: 35.4167vw;  
+}
+.section .right-box .img-wrap{
+	width: 68rem; height: 88.5rem;
+	background: url(../images/section_main.png);
+	background-size: contain;
+}
+.section span.sub-txt{
+	position: absolute;
+	right: 2.0833vw;top: 35.4167vw;
+}
+
+.section .right-box .txt{}

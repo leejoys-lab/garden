@@ -1,0 +1,231 @@
+button{margin: 0; padding: 0; border: 0; }
+button{text-transform: none; vertical-align: middle}
+button,[type="button"],[type="reset"],[type="submit"] {background-color:transparent; cursor: pointer; }
+/* :not(switch):before, :not(switch):after {display:none; content:'';} */
+
+/* 우측 공통 -  바로예약, 바로가기 모음 */
+@media only screen and (min-width:1023px){
+	.not_scrolling #floating{z-index: 50;}
+	#floating{
+		position:fixed; 
+		top:0; right:-110px; 
+		z-index:700; 
+		width:170px; height:100%; 
+		background-color:#19161c; 
+		transition:right 0.35s 
+		cubic-bezier(1,-0.01, 0, 1.01);
+	}
+	#floating .active_text{
+		display: block; 
+		visibility:hidden; 
+		opacity:0; 
+		transform: scaleX(0); 
+		transition:opacity 0.1s linear;
+	}
+	
+	#floating .straight {
+		position:relative; 
+		height:219px; 
+		background:#05302D;
+	}
+	#floating .straight:before{
+		content: "";
+		display:block; 
+		position:absolute; 
+		left:0; bottom:0; 
+		width: 100%;  
+		background: #05302D;
+		border-bottom:20px solid #19161c; 
+		border-left:60px solid transparent; 
+		box-sizing:border-box;
+	}
+	#floating .straight .rsvt_open{
+		display:block; 
+		position:relative; 
+		top:67px; width: 60px; 
+		padding-top:37px; 
+		text-align: left;
+	}
+	#floating .straight .rsvt_open:before{
+		content: "";
+		display:block; 
+		position:absolute; 
+		top:-10px; left:15px;
+		width:29px; height:30px; 
+		background: #000;
+		background:url(../images/icon-menu.svg) no-repeat;
+	}
+	#floating .straight .rsvt_open strong{
+		display:block; 
+		font-size:14px; 
+		color:#fff; 
+		line-height:17px; 
+		text-align:center;
+	}
+	#floating .straight .rsvt_open strong:before{
+		content:"";
+		display:block; 
+		width:1px; height:10px; 
+		margin:0 auto 15px; 
+		background-color:rgba(255,255,255,0.5);
+	}
+	#floating .straight .rsvt_open span{display: none;}
+	#floating ul li{ border-bottom: 1px solid #262329;}
+	#floating ul li a{
+		display: block; 
+		position: relative; 
+		height: 65px; 
+		padding:17px 10px 0 60px; 
+		box-sizing:border-box; 
+		line-height: 65px; 
+		text-align: left; 
+		text-decoration: none;
+	}
+
+	#floating ul li a span{
+		display: block; 
+		line-height: 16px;
+	}
+	#floating ul li a span.eng{
+		font-size: 11px; 
+		color:#fff; 
+		text-transform: uppercase;
+	}
+	#floating ul li a span.kor{
+		font-size: 12px; 
+		color:#fff;
+	}
+	
+	#floating ul li a:hover,
+	#floating ul li a:focus{background-color: #175F5A;}
+	#floating ul li a:hover:before,
+	#floating ul li a:focus:before{opacity:1;}
+	#floating ul li a:hover:after,
+	#floating ul li a:focus:after{
+		content:"";
+		display: block; 
+		position: absolute; 
+		top: 5px; left: 5px; 
+		width: calc(100% - 10px); 
+		height:calc(100% - 10px); 
+		border: 1px solid #ffffff; 
+		box-sizing:border-box;
+		opacity:0.3;
+	}
+	/* 아이콘 */
+	#floating ul li a::before{
+		content:"";
+		display: block;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: calc(50% - 11px);
+		left: calc(30px - 11px);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: contain;
+	}
+	#floating ul li a.call:before {background-image: url(../images/icon_call.png);}
+	#floating ul li a.fee:before {background-image: url(../images/icon_price.png);}
+	#floating ul li a.edu:before {
+		background-image: url(../images/icon_edu.png); 
+		width: 25px;height: 30px; 
+		background-size: cover;
+		top: calc(50% -25px);
+		left: calc(16px );
+		opacity: 0.9;
+	}
+	#floating ul li a.online:before {background-image: url(../images/icon_online_edu.png);}
+	#floating ul li a.guide:before {background-image: url(../images/icon_guide.png);}
+	#floating ul li a.safety:before {background-image: url(../images/icon_safety.png);}
+	#floating ul li a.location:before {background-image: url(../images/icon_map.png);}
+	#floating ul li a.parking:before {background-image: url(../images/icon_car.png);}
+
+	/* active */
+	#floating.active{right: 0;}
+	#floating.active .active_text{
+		visibility:visible; 
+		opacity:1; 
+		transform:scaleX(1);
+		font-family: 'pretendard';
+		font-weight: 200;
+	}
+	#floating.active .straight{
+		padding: 0 20px; 
+		box-sizing:border-box;
+		background-color:#05302D;
+	}
+	#floating.active .straight:before{display: none;}
+	#floating.active .straight .rsvt_open{
+		width: 100%; position: relative;
+		padding-top: 0; padding-left: 0;
+	}
+	#floating.active .straight .rsvt_open:before{
+		content:"";
+		display: inline-block; 
+		position: absolute;
+		left: -3px; top: -8px;
+		width: 25px; height: 25px; 
+		background-position: 0 0; 
+		vertical-align: top;
+		background:url(../images/icon-menu.svg) no-repeat;
+	}
+	#floating.active .straight .rsvt_open strong{
+		display: inline-block; 
+		padding-left: 35px; 
+		font-size: 18px; 
+		line-height: 18px;
+	}
+	#floating.active .straight .rsvt_open strong br{display: none;}
+	#floating.active .straight .rsvt_open strong:before{display: none;}
+	#floating.active .straight .rsvt_open:after{
+		content:"";
+		display: block; 
+		width: 50px; height: 10px; 
+		margin-top: 20px; 
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: contain;
+		background-image: url(../images/arrow_right_gray.png);
+	} 
+	#floating.active .straight .rsvt_open:hover:after{
+		animation-name: straight_arrows;
+		animation-duration: 1.2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+	}
+	#floating.active .straight span{
+		display: block; 
+		width: 170px; 
+		margin-top: 20px; 
+		color:#fff; 
+		font-size:13px; 
+		line-height: 18px; 
+	}
+	
+	@keyframes straight_arrows {
+	  0%   {margin-left: 0;}
+	  25%  {margin-left: 0;}
+	  30%  {margin-left: 10px;}
+	  50%  {margin-left: 0;}
+	  70%  {margin-left: 10px;}
+	  75%  {margin-left: 0;}
+	  100% {margin-left: 0;}
+	}
+	
+	#floating.active ul li a span.eng{opacity:0.15;}
+	#floating.active ul li a span.kor{opacity:0.6;}
+	#floating.active ul li a:hover span.eng,
+	#floating.active ul li a:focus span.eng{opacity:0.5;}
+	#floating.active ul li a:hover span.kor,
+	#floating.active ul li a:focus span.kor{opacity:0.8;}
+
+	#floating.active .straight .rsvt_foreign{
+		position:relative; 
+		top: 90px; left: 0; 
+		padding: 30px 0 0 0; 
+		background-position: center top; 
+		transform: rotate(0); 
+		text-align: center; 
+	}
+}

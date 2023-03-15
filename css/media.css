@@ -1,0 +1,330 @@
+@media screen and (max-width: 1023px) {
+	#wrap .swiper-button-next:after, .swiper-button-prev:after {
+		display: none;
+	}
+
+	#header .seoul-news {
+		display: none;
+	}
+	#header .main-logo a{top: 3.5rem;}
+
+	#header .main-logo a img {
+		width: 19.5503vw;
+	}
+	#visual .swiper-wrapper h3 {
+		font-size: 2.4438vw;
+	}
+	#visual .menu {
+		display: block;
+		top: 3.5rem;
+		cursor: pointer;
+	}
+	#visual .menu img {
+		width: 4.3988vw;
+	}
+	.control-box {
+		left: 50%;
+		bottom: 3rem;
+		transform: translateX(-50%);
+		height: 5.6rem;
+		width: 93%;
+	}
+	.control-box .news-box {
+		display: none;
+	}
+	.control-box .info-box {
+        width: 100%;
+		height: 100%;
+		padding-right: 0;
+        font-size: 1.3685vw;
+	}
+	.control-box .info-box .info-txt .time{
+		margin-right: 3.2595vw;
+	}
+	.control-box .info-box .info-txt span img{
+		width: 2.3460vw;
+	}
+    .control-box .info-box .info-txt span strong{
+        margin-right: 4.8876vw;
+    }
+	.control-box .info-txt span strong::after{
+		height: 1.4663vw;
+		left: 1.4663vw;
+	}
+	.control-box .info-box .more {
+		height: 5.6rem;
+	}
+	.control-box .info-box .more span i {
+        font-size: 1.3685vw;
+		line-height: 5.6rem;
+	}
+
+	/* 오른쪽 메뉴 */
+	#floating {
+		display: none;
+	}
+
+	/* 콘텐츠 시작 */
+	/* 01. 체험 및 투어신청 */
+	.main .notice{
+	}
+	.main .notice .inner{
+		position: relative;
+		width: 90%;
+		margin: auto;
+		padding: 0;
+		display: flex;
+	}
+	.main .con-box h2{
+		padding: 0;
+		font-size: 3.7146vw;
+		margin: 0;
+		margin-top : 19.5503vw;
+	}
+
+	.main .notice .vid-wrap {
+		position: absolute;
+		left: -15.6403vw; 
+		bottom:8.7977vw ;
+		width: 43.0108vw;
+		height: 62.5611vw;
+	}
+	.main .notice .vid-wrap .vid video{
+		left: -20rem;
+	}
+	.main .notice .vid-wrap .line img{display: none;}
+	.main .notice .sub-txt {
+		font-size: 5.3763vw;
+		width: 48.8759vw;
+		left: -25.4896vw;
+    	top: 31.3125vw;
+	}
+	.main .notice .notice-wrap {
+		width: 59%;
+		padding: 0;
+		margin-left: auto
+	}
+	
+	.main .notice .notice-list ul{
+		margin:8.7977vw 0;
+	}
+	.main .notice .notice-list ul li {
+		border-bottom: 1px solid #ddd;
+	}
+	.main .notice .notice-list ul li a{
+		flex-wrap: wrap;
+		align-content: space-evenly;
+		height: 13.6852vw;
+		position: relative;
+	}
+	.main .notice .notice-list ul li a .title{
+		width: 100%;
+		font-size: 1.9550vw;
+	}
+	.main .notice .notice-list ul li a .title p{
+	}
+	.main .notice .notice-list ul li a .type {
+		width: 8.3089vw;
+		height: 2.4438vw;
+		line-height: 2.4438vw;
+		font-size: 1.3685vw;
+		margin-top: 0.7820vw;
+	}
+	.main .notice .notice-list ul li a .date{
+		width: 100%;
+		font-size: 1.5640vw;
+		color:#999;
+	}
+	.main .notice .notice-list ul li a .arrow{
+		position: absolute;
+		right: 1.9550vw; top: 0;
+	}
+	.main .notice .notice-list ul li a .arrow img{width: 3.9101vw;
+	}
+	.main .notice .notice-list ul li:nth-child(4),.main .notice .notice-list ul li:nth-child(5){display: none;}
+	.main .notice .notice-list p.more {
+		right: 0; top:0.4888vw;
+	}
+	.main .notice .notice-list p.more a{
+		width: 3.7146vw; height: 3.7146vw;
+	}
+	.main .notice .notice-list p.more a i {
+		font-size: 1.9550vw;
+	}
+
+	/* con2 : 식물원 둘러보기 */
+	.section .right-box{
+		display: none;
+	}
+	.section .left-box{
+		width: 100%;
+	}
+	.section .inner{width: 100%;}
+	.section .left-box .sec-txt{margin: auto;}
+	.section .left-box .sec-txt h2{text-align: center;}
+	.section .left-box .sec-txt p{margin: auto; width: 100%;}
+	.section span.sub-txt{display: none;}
+}
+
+@media screen and (max-width: 767px) {
+	#visual .swiper-wrapper h3 {
+		top:20%;
+		font-size: 4.1721vw;
+		word-break: keep-all;
+	}
+	#header .main-logo a {
+		top : 5.6063vw ;
+	}
+	#header .main-logo a img{
+		width: 20.8605vw;
+	}
+	#visual .menu {
+		top: 5.2151vw;
+	}
+	#visual .menu img {
+		width: 7.1708vw;
+	}
+	#visual .swiper-wrapper h3{
+		font-size: 3.6506vw;
+		top:20%
+	}
+	.control-box {
+		/* bottom:100px */
+		bottom: 13.0378vw; 
+		height: 15.6454vw;
+		width: 95%;
+	}
+	.control-box .info-box {
+		width: 100%;
+		height: 100%;
+		padding-right: 0;
+		font-size: 2.6076vw;
+		position: relative;
+	}
+	.control-box .info-box::after{
+		content:"";
+		width: 100%;
+		height: 0.1rem;
+		display: block;
+		background: #dedede;
+		position: absolute;
+		left: 0;top: 7.8227vw;
+	}
+	.control-box .info-box .entry-time {
+		position: absolute;
+		left:4.1721vw;
+		top: 2.0860vw;
+	}
+	.control-box .info-box .end-time {
+		position: absolute;
+		right: 4.1721vw;
+		top: 1.9557vw;
+	}
+	.control-box .info-box .info-txt .time{
+		margin-right: 1.3038vw;
+	}
+	.control-box .info-box .info-txt span strong{
+		margin-right: 2.0860vw;}
+	.control-box .info-txt span strong:last-child{
+		margin-right: 0;
+	}
+	.control-box .info-box .info-txt strong::after{
+	display: none;
+	}
+	.control-box .info-box .info-txt .entry-time strong:last-child:after{
+		display: inline-block;
+		height:3.2595vw;
+		position: absolute;
+		left: 19.5567vw; bottom: 0;
+	}
+	.control-box .info-box .info-txt span img {
+		width: 4.5632vw;
+	}
+	.control-box .info-box .rest {
+		position: absolute;
+		left: 50%;
+		bottom:1.9557vw;
+		transform: translateX(-50%);
+	}
+	.control-box .info-box .more {
+		width: 100%;
+		height: 50%;
+		position: absolute;
+		left: 0;
+		bottom: -50%;
+	}
+	.main .con-box h2 {
+		font-size: 6.5189vw;
+		text-align: center;
+		margin: 0;
+	}
+	.main .notice .vid-wrap{display: none;}
+	.main .notice .sub-txt {
+		transform: rotate(0);
+		font-size: 3.9113vw;
+		position: absolute;
+		left: 50%;top: 14.3416vw;
+		transform: translateX(-50%);
+		text-align: center;		
+	}
+	.main .notice .notice-wrap {
+		margin: auto;
+		width: 100%;
+		padding: 20.8605vw 0;
+	}
+	
+	.main .notice .notice-list ul{
+		margin:0;
+		margin-top: 15.6454vw;
+	}
+	.main .notice .notice-list ul li a{
+		height: 20.8605vw;
+	}
+	.main .notice .notice-list ul li a .title{
+		font-size: 3.1291vw;
+		overflow:visible;
+		margin-top: 0.4888vw;
+	}
+	.main .notice .notice-list ul li a .type {
+		width: 14.0808vw;
+		height:3.5202vw;
+		line-height: 3.5202vw;
+		font-size: 1.9557vw;
+	}
+	.main .notice .notice-list ul li a .date{
+		font-size: 2.0860vw;
+	}
+	.main .notice .notice-list ul li:nth-child(1){
+		border-top: 1px solid #ddd;
+	}
+	.main .notice .notice-list ul li:nth-child(4),.main .notice .notice-list ul li:nth-child(5){display: block;}
+	
+	.main .notice .notice-list p.more {
+		display: inline-block;
+		right: 0; top:18.2529vw;
+	}
+	.main .notice .notice-list p.more a{
+		display: flex;
+		width: 26.0756vw;
+	}
+	.main .notice .notice-list p.more a em{
+		display: inline-block;
+		color: #999;
+		font-size: 2.6076vw;
+		margin-left: auto;
+		line-height: 5.3vw;
+		padding-right: 1.3038vw;
+	}
+	.main .notice .notice-list p.more a span{
+		width: 4.6936vw; height: 4.6936vw;
+		border-color: #999;
+	}
+	.main .notice .notice-list p.more a  span i {
+		font-size:2.8683vw;
+		color: #999;
+	}
+
+
+
+	
+}
