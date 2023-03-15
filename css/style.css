@@ -493,7 +493,7 @@
 	transition: left 0.3s;
 }
 .main .notice .notice-list ul li a:hover .title{
-	font-weight: 500;
+	
 	color: #175f5a;
 }
 .main .notice .notice-list ul li a:hover .arrow img{
